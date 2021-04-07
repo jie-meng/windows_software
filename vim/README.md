@@ -11,7 +11,7 @@ function! fzf#vim#with_preview(...)里的
 let window = arg[0] 改成 let window = 'up'，让弹出cmd显示的内容更宽
 
 将function! fzf#vim#ag(query, ...)里的
-let command = ag_opts . ' -- ' . fzf#shellescape(query) 改成 let command = ag_opts . ' -- ' . s: strreplace(fzf#shellescape(query), "'", "\""
+let command = ag_opts . ' -- ' . fzf#shellescape(query) 改成 let command = ag_opts . ' -- ' . s: strreplace(fzf#shellescape(query), "'", "\\""
 单引号转双引号
 
 Google 搜索 vim strreplace，找到stack overflow
